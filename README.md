@@ -1,6 +1,12 @@
+Docker Image Setup
+---
+- build image: `docker build -t <image-name>:latest . --no-cache`
+- create docker-compose-swarm.yml, only with latest image (without: container name, hostname, network, restart)
+
+
+
 Docker swarm connecting node
 ---
-
 [Master]
 - `docker swarm init`
 - copy entire join code
@@ -12,9 +18,9 @@ Docker swarm connecting node
 - check node is connected or not `docker node ls`
 
 
+
 Docker swarm deploy compose file
 ---
-
 [Master or Workers]
 - up services `docker stack deploy --compose-file <docker-compose-file> <stack-name>`
 - checking services, is up or not `docker service ls` and `docker service ps <service-id>` and `<docker inspect <container-id>>`
