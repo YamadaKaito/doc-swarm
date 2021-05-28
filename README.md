@@ -5,7 +5,7 @@ Docker Image Setup
 
 
 
-Docker swarm connecting node
+Docker Swarm Setup
 ---
 [Master]
 - `docker swarm init`
@@ -19,7 +19,7 @@ Docker swarm connecting node
 
 
 
-Docker swarm deploy compose file
+Deploy to Swarm
 ---
 [Master or Workers]
 - up services `docker stack deploy --compose-file <docker-compose-file> <stack-name>`
